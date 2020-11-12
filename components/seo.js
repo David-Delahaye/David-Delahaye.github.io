@@ -1,7 +1,6 @@
-import Head from "next/Head";
+import Head from "next/head";
 
 export default function Seo({ title, description }) {
-  console.log("here");
   return (
     <div>
       <Head>
