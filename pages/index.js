@@ -28,7 +28,7 @@ export default function Home() {
             <div className="logo-wrapper">
               <Image
                 className="logo"
-                src="/git.png"
+                src="/techs/git.png"
                 alt="git"
                 width="1280"
                 height="535"
@@ -37,7 +37,7 @@ export default function Home() {
             <div className="logo-wrapper">
               <Image
                 className="logo"
-                src="/html.png"
+                src="/techs/html.png"
                 alt="HTML5"
                 width="512"
                 height="512"
@@ -46,7 +46,7 @@ export default function Home() {
             <div className="logo-wrapper">
               <Image
                 className="logo"
-                src="/css.png"
+                src="/techs/css.png"
                 alt="CSS3"
                 width="800"
                 height="1128"
@@ -55,7 +55,7 @@ export default function Home() {
             <div className="logo-wrapper">
               <Image
                 className="logo"
-                src="/js.png"
+                src="/techs/js.png"
                 alt="JS"
                 width="500"
                 height="500"
@@ -64,7 +64,7 @@ export default function Home() {
             <div className="logo-wrapper">
               <Image
                 className="logo"
-                src="/react.png"
+                src="/techs/react.png"
                 alt="React"
                 width="1200"
                 height="848"
@@ -73,7 +73,7 @@ export default function Home() {
             <div className="logo-wrapper">
               <Image
                 className="logo"
-                src="/sass.png"
+                src="/techs/sass.png"
                 alt="Sass"
                 width="820"
                 height="400"
@@ -82,7 +82,7 @@ export default function Home() {
             <div className="logo-wrapper">
               <Image
                 className="logo"
-                src="/node.png"
+                src="/techs/node.png"
                 alt="NodeJS"
                 width="1280"
                 height="344"
@@ -91,7 +91,7 @@ export default function Home() {
             <div className="logo-wrapper">
               <Image
                 className="logo"
-                src="/mongo.png"
+                src="/techs/mongo.png"
                 alt="MongoDB"
                 width="2226"
                 height="601"
@@ -100,7 +100,7 @@ export default function Home() {
             <div className="logo-wrapper">
               <Image
                 className="logo"
-                src="/psql.png"
+                src="/techs/psql.png"
                 alt="PSQL"
                 width="556"
                 height="540"
