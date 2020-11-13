@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 export default function Page({ children }) {
   if (typeof window !== "undefined") {
-    const bar = Math.floor((window.innerHeight / 100) * 60);
+    const bar = Math.floor((window.innerHeight / 100) * 80);
     console.log(bar);
     if (window.scrollY > bar) {
       console.log(window.scrollY, bar);

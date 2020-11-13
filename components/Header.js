@@ -1,16 +1,26 @@
 import Icons from "../components/icons";
+import Image from "next/image";
 import SelectLink from "../components/Link";
 
 export default function Header() {
   return (
     <header>
       <div className="splash">
-        <h1>David Delahaye</h1>
-        <h2>Front-End Developer</h2>
-        <h2>
-          <i class="fas fa-map-marker-alt"></i> North West, UK
-        </h2>
-        <Icons />
+        <div className="splash-text">
+          <h1>David Delahaye</h1>
+          <h2>Front-End Developer</h2>
+          <h2>
+            <img className="icon" src="/location.svg" /> North West, UK
+          </h2>
+          <Icons />
+        </div>
+        <Image
+          className="splash-image"
+          src="https://images.unsplash.com/photo-1601204200071-d223e81548f0"
+          alt="David Delahaye"
+          width="5304"
+          height="7952"
+        />
       </div>
       <div className="bar">
         <nav className="nav">
