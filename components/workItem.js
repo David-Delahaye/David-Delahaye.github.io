@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function WorkItem(props) {
   let technologies = props.techs.map((e, i) => {
     return <p key={i}>{e}</p>;
@@ -9,7 +11,12 @@ export default function WorkItem(props) {
           <h3>
             {props.name} - {props.year}
           </h3>
-          <img src={props.image} alt="responsive site image" />
+          <Image
+            src={props.image}
+            alt={`responsive view of ${props.name}`}
+            width="1857"
+            height="900"
+          />
           <h4>Technologies utilized</h4>
           <div className="tags">{props.techs ? technologies : ""}</div>
         </div>

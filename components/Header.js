@@ -16,7 +16,7 @@ export default function Header() {
         </div>
         <Image
           className="splash-image"
-          src="https://images.unsplash.com/photo-1601204200071-d223e81548f0"
+          src="/splash2.jpg"
           alt="David Delahaye"
           width="5304"
           height="7952"
