@@ -34,6 +34,10 @@ html {
   overflow-x: hidden;
 }
 
+.siteWrapper {
+  overflow: hidden;
+}
+
 header {
   position: relative;
   color: $light-color;
@@ -87,6 +91,7 @@ header {
 
 .page {
   z-index: 0;
+  overflow-x: hidden;
 }
 
 .icons {
@@ -147,9 +152,15 @@ li {
 .logos {
   @extend %flex-center;
   flex-wrap: wrap;
-  .logo {
-    height: 2rem;
-    margin: 1rem;
+  position: relative;
+  align-items: center;
+  .logo-wrapper {
+    position: relative;
+    height: 4rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
   }
 }
 
