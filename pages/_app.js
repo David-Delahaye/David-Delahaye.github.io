@@ -1,14 +1,24 @@
 import "../styles/globals.css";
-import Link from "next/link";
+import SelectLink from "../components/Link";
+import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
 import Icons from "../components/icons";
 import Seo from "../components/seo";
+import Page from "../components/page";
+import { motion, AnimatePresence } from "framer-motion";
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <Seo
         title="David Delahaye"
-        description="David Delahaye is Generally considered to be a very good buy"
+        description="David Delahaye is Generally considered to be a very good guy"
       />
 
       <header>
@@ -22,27 +32,31 @@ function MyApp({ Component, pageProps }) {
         </div>
         <div className="bar">
           <nav className="nav">
-            <Link href="/" activeClassName="is-active" exact>
-              Home
-            </Link>{" "}
+            <SelectLink href="/" className="is-active">
+              <a>Home</a>
+            </SelectLink>{" "}
             /
-            <Link href="/contact" activeClassName="is-active" exact>
-              Contact
-            </Link>{" "}
+            <SelectLink href="/contact" className="is-active">
+              <a>Contact</a>
+            </SelectLink>{" "}
             /
-            <Link href="/work" activeClassName="is-active" exact>
-              Work
-            </Link>
+            <SelectLink href="/work" className="is-active">
+              <a>Work</a>
+            </SelectLink>
           </nav>
         </div>
       </header>
 
-      <Component {...pageProps} />
+      <AnimatePresence exitBeforeEnter>
+        <Page key={router.route}>
+          <Component {...pageProps} />
+        </Page>
+      </AnimatePresence>
 
       <footer>
         <Icons />
       </footer>
-    </div>
+    </motion.div>
   );
 }
 

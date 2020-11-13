@@ -31,12 +31,11 @@ html {
   color: rgb(11, 44, 16);
   font-family: "Josefin Sans", sans-serif;
   font-size: 15px;
-  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 header {
-  position: sticky;
-  top: -60vh;
+  position: relative;
   color: $light-color;
   .splash {
     @extend %flex-center;
@@ -46,9 +45,10 @@ header {
     flex-direction: column;
     text-align: center;
     width: 100%;
+    border-bottom: 3rem solid $dark-color;
   }
   .bar {
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
     background-color: $dark-color;
@@ -76,13 +76,17 @@ header {
           box-shadow: inset 200px 200px 40px rgba(255, 255, 255, 0.329);
         }
       }
-      .is-active {
+      .selected {
         color: $dark-color !important;
         background-color: $back-accent !important;
         box-shadow: none !important;
       }
     }
   }
+}
+
+.page {
+  z-index: 0;
 }
 
 .icons {
@@ -109,6 +113,7 @@ header {
 
 main {
   overflow: hidden;
+  min-height: 70rem;
   flex-direction: column;
   section {
     @extend %container;

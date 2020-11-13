@@ -30,13 +30,11 @@ html {
   color: #0b2c10;
   font-family: "Josefin Sans", sans-serif;
   font-size: 15px;
-  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: -60vh;
+  position: relative;
   color: #e0f6e1;
 }
 
@@ -50,11 +48,11 @@ header .splash {
           flex-direction: column;
   text-align: center;
   width: 100%;
+  border-bottom: 3rem solid #061407;
 }
 
 header .bar {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   background-color: #061407;
@@ -95,11 +93,15 @@ header .bar .nav a:hover {
           box-shadow: inset 200px 200px 40px rgba(255, 255, 255, 0.329);
 }
 
-header .bar .nav .is-active {
+header .bar .nav .selected {
   color: #061407 !important;
   background-color: #eaf0eb !important;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
+}
+
+.page {
+  z-index: 0;
 }
 
 .icons {
@@ -137,6 +139,7 @@ header .bar .nav .is-active {
 
 main {
   overflow: hidden;
+  min-height: 70rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

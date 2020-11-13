@@ -1,8 +1,9 @@
 import Link from "next/link";
+import Page from "../components/page";
 
 export default function Home() {
   return (
-    <div>
+    <Page>
       <main>
         <section>
           <h2>Who Am I?</h2>
@@ -84,6 +85,6 @@ export default function Home() {
           </Link>
         </section>
       </main>
-    </div>
+    </Page>
   );
 }
