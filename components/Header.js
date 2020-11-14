@@ -2,14 +2,12 @@ import Icons from "../components/icons";
 import Image from "next/image";
 import ScrollDown from "../components/ScrollDown";
 import SelectLink from "../components/Link";
-import Image2 from "../components/Image2";
 import Nav from "../components/Nav";
 import { motion } from "framer-motion";
 
 export default function Header() {
   return (
     <header>
-      <Image2 src="/splash.jpg" />
       <div className="splash">
         <motion.div className="splash-text">
           <h1>David Delahaye</h1>
