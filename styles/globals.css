@@ -17,6 +17,7 @@ header .splash, header .bar .nav, header .bar .nav a, .icons, .logos, footer {
   left: 0px;
   right: 0px;
   height: 5rem;
+  width: 100%;
   background-color: red;
   z-index: 100;
 }

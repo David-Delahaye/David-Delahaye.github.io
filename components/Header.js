@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 export default function Header() {
   return (
     <header>
-      <Image2 cool="beans" />
+      <Image2 src="/splash.jpg" />
       <div className="splash">
         <motion.div className="splash-text">
           <h1>David Delahaye</h1>
