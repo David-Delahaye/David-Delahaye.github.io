@@ -11,6 +11,16 @@ header .splash, header .bar .nav, header .bar .nav a, .icons, .logos, footer {
           align-items: center;
 }
 
+.netTest {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 5rem;
+  background-color: red;
+  z-index: 100;
+}
+
 header .bar .nav, main section {
   width: 100%;
   max-width: 50rem;
@@ -39,14 +49,14 @@ html {
 
 header {
   position: relative;
-  color: #e0f6e1;
+  color: #dff6e1;
 }
 
 header .splash {
   z-index: 1;
   position: relative;
   overflow: hidden;
-  height: 80vh;
+  height: 100vh;
   background-color: black;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -54,15 +64,31 @@ header .splash {
           flex-direction: column;
   text-align: center;
   width: 100%;
-  border-bottom: 3rem solid #061407;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-header .splash .splash-image {
+header .splash .splash-image-wrapper {
+  position: absolute;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+}
+
+header .splash .splash-image-wrapper div {
+  width: 100%;
+  height: 100%;
+}
+
+header .splash .splash-image-wrapper div .splash-image {
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  z-index: -1;
+  -o-object-position: left;
+     object-position: left;
 }
 
 header .splash .splash-text {
@@ -74,6 +100,12 @@ header .splash .splash-text {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 5rem;
+}
+
+header .splash .splash-text h1,
+header .splash .splash-text h2 {
+  margin-bottom: 0.5rem;
 }
 
 header .bar {
@@ -101,7 +133,7 @@ header .bar .nav a {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   text-decoration: none;
-  color: #e0f6e1;
+  color: #dff6e1;
   height: 3rem;
   width: 30%;
   text-align: center;
@@ -125,6 +157,13 @@ header .bar .nav .selected {
           box-shadow: none !important;
 }
 
+.scrollDown {
+  position: absolute;
+  bottom: 0px;
+  left: 40px;
+  z-index: 10;
+}
+
 .page {
   z-index: 0;
   overflow-x: hidden;
@@ -136,10 +175,11 @@ header .bar .nav .selected {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   width: 20rem;
+  z-index: 10;
 }
 
 .icons .social {
-  color: #e0f6e1;
+  color: #dff6e1;
   text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -286,7 +326,7 @@ li {
 .work .half .tags p {
   padding: 0.3rem;
   margin: 0.2rem 0.3rem;
-  background-color: #e0f6e1;
+  background-color: #dff6e1;
 }
 
 .work .links {
