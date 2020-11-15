@@ -7,7 +7,7 @@ function useActive() {
   const { scrollY } = useViewportScroll();
   useEffect(() => {
     scrollY.onChange(() => {
-      if (scrollY.current > window.innerHeight - 100) {
+      if (scrollY.current > window.innerHeight - 41) {
         console.log("active");
         setActive("active");
       } else {

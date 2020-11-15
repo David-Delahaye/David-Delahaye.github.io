@@ -1,24 +1,22 @@
 import * as React from "react";
-import { useEffect, useState } from "react";
-import {
-  motion,
-  useViewportScroll,
-  useSpring,
-  useTransform,
-} from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function ScrollDown() {
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+  };
+
   return (
     <motion.div
       className="scroll"
-      initial={{ y: 100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 1 }}
+      variants={item}
+      key="scroller"
       onClick={() => {
         if (typeof window !== "undefined") {
           console.log("here");
           window.scroll({
-            top: window.innerHeight - 50,
+            top: window.innerHeight - 40,
             left: 0,
             behavior: "smooth",
           });

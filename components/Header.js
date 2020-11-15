@@ -3,18 +3,40 @@ import Image from "next/image";
 import ScrollDown from "../components/ScrollDown";
 import SelectLink from "../components/Link";
 import Nav from "../components/Nav";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Header() {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.25,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+  };
+
   return (
-    <header>
+    <motion.header variants={container} initial="hidden" animate="show">
       <div className="splash">
         <motion.div className="splash-text">
-          <h1>David Delahaye</h1>
-          <h2>Front-End Developer</h2>
-          <h2>
+          <motion.h1 key="title" variants={item}>
+            David Delahaye
+          </motion.h1>
+
+          <motion.h2 key="job" variants={item}>
+            Front-End Developer
+          </motion.h2>
+
+          <motion.h2 key="location" variants={item}>
             <img className="icon" src="/location.svg" /> North West, UK
-          </h2>
+          </motion.h2>
           <Icons />
         </motion.div>
         <div className="splash-image-wrapper">
@@ -29,6 +51,6 @@ export default function Header() {
         </div>
       </div>
       <ScrollDown />
-    </header>
+    </motion.header>
   );
 }
