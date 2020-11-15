@@ -11,17 +11,6 @@ header .splash, header .bar .nav, header .bar .nav a, .icons, .logos, footer {
           align-items: center;
 }
 
-.netTest {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  height: 5rem;
-  width: 100%;
-  background-color: red;
-  z-index: 100;
-}
-
 header .bar .nav, main section {
   width: 100%;
   max-width: 50rem;

@@ -13,17 +13,6 @@ $padding-space-m: 4rem 3rem;
   align-items: center;
 }
 
-.netTest {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  height: 5rem;
-  width: 100%;
-  background-color: red;
-  z-index: 100;
-}
-
 %container {
   width: 100%;
   max-width: 50rem;
