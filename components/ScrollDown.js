@@ -17,7 +17,7 @@ export default function ScrollDown() {
   //useEffect(() => yRange.onChange((v) => setIsComplete(v >= 1)), [yRange]);
 
   return (
-    <svg className="scrollDown" viewBox="0 0 60 60">
+    <svg className="scrollDown" viewBox="0 0 60 60" style={{ zIndex: "0" }}>
       <motion.path
         fill="none"
         strokeWidth="5"

@@ -12,7 +12,7 @@ export default function Header() {
           <h1>David Delahaye</h1>
           <h2>Front-End Developer</h2>
           <h2>
-            <img className="icon" src="/location.svg" /> North West, UK
+            <img className="social-icon" src="/location.svg" /> North West, UK
           </h2>
           <Icons />
         </motion.div>
