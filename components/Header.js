@@ -4,8 +4,10 @@ import ScrollDown from "../components/ScrollDown";
 import SelectLink from "../components/Link";
 import Nav from "../components/Nav";
 import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 
 export default function Header() {
+  const [loaded, setLoaded] = useState("");
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -41,7 +43,11 @@ export default function Header() {
         </motion.div>
         <div className="splash-image-wrapper">
           <Image
-            className="splash-image"
+            className={`splash-image ${loaded}`}
+            onLoad={() => {
+              console.log("loaded");
+              setLoaded("loaded");
+            }}
             src="/splash2.jpg"
             alt="David Delahaye"
             width="5304"

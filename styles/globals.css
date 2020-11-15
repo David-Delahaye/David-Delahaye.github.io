@@ -81,6 +81,13 @@ header .splash .splash-image-wrapper div .splash-image {
      object-fit: cover;
   -o-object-position: left;
      object-position: left;
+  opacity: 0;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
+}
+
+header .splash .splash-image-wrapper div .splash-image.loaded {
+  opacity: 1;
 }
 
 header .splash .splash-text {

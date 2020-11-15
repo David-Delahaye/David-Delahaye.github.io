@@ -68,6 +68,11 @@ header {
         .splash-image {
           object-fit: cover;
           object-position: left;
+          opacity: 0;
+          transition: opacity 2s;
+          &.loaded {
+            opacity: 1;
+          }
         }
       }
     }
