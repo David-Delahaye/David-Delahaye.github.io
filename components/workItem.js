@@ -9,12 +9,7 @@ export default function WorkItem(props) {
           <h3>
             {props.name} - {props.year}
           </h3>
-          <img
-            src={props.image}
-            alt={`responsive view of ${props.name}`}
-            width="1857"
-            height="900"
-          />
+          <img src={props.image} alt={`responsive view of ${props.name}`} />
           <h4>Technologies utilized</h4>
           <div className="tags">{props.techs ? technologies : ""}</div>
         </div>

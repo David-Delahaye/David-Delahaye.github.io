@@ -21,9 +21,6 @@ export default function Header() {
             className="splash-image"
             src="/splash2.jpg"
             alt="David Delahaye"
-            width="5304"
-            height="7952"
-            layout="responsive"
           />
         </div>
       </div>
