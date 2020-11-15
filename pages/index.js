@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import Page from "../components/page";
 
 export default function Home() {
@@ -26,7 +25,7 @@ export default function Home() {
           </p>
           <div className="logos">
             <div className="logo-wrapper">
-              <Image
+              <img
                 className="logo"
                 src="/techs/git.png"
                 alt="git"
@@ -35,7 +34,7 @@ export default function Home() {
               />
             </div>
             <div className="logo-wrapper">
-              <Image
+              <img
                 className="logo"
                 src="/techs/html.png"
                 alt="HTML5"
@@ -44,7 +43,7 @@ export default function Home() {
               />
             </div>
             <div className="logo-wrapper">
-              <Image
+              <img
                 className="logo"
                 src="/techs/css.png"
                 alt="CSS3"
@@ -53,7 +52,7 @@ export default function Home() {
               />
             </div>
             <div className="logo-wrapper">
-              <Image
+              <img
                 className="logo"
                 src="/techs/js.png"
                 alt="JS"
@@ -62,7 +61,7 @@ export default function Home() {
               />
             </div>
             <div className="logo-wrapper">
-              <Image
+              <img
                 className="logo"
                 src="/techs/react.png"
                 alt="React"
@@ -71,7 +70,7 @@ export default function Home() {
               />
             </div>
             <div className="logo-wrapper">
-              <Image
+              <img
                 className="logo"
                 src="/techs/sass.png"
                 alt="Sass"
@@ -80,7 +79,7 @@ export default function Home() {
               />
             </div>
             <div className="logo-wrapper">
-              <Image
+              <img
                 className="logo"
                 src="/techs/node.png"
                 alt="NodeJS"
@@ -89,7 +88,7 @@ export default function Home() {
               />
             </div>
             <div className="logo-wrapper">
-              <Image
+              <img
                 className="logo"
                 src="/techs/mongo.png"
                 alt="MongoDB"
@@ -98,7 +97,7 @@ export default function Home() {
               />
             </div>
             <div className="logo-wrapper">
-              <Image
+              <img
                 className="logo"
                 src="/techs/psql.png"
                 alt="PSQL"

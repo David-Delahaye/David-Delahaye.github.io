@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function WorkItem(props) {
   let technologies = props.techs.map((e, i) => {
     return <p key={i}>{e}</p>;
@@ -11,7 +9,7 @@ export default function WorkItem(props) {
           <h3>
             {props.name} - {props.year}
           </h3>
-          <Image
+          <img
             src={props.image}
             alt={`responsive view of ${props.name}`}
             width="1857"

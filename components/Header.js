@@ -1,5 +1,4 @@
 import Icons from "../components/icons";
-import Image from "next/image";
 import ScrollDown from "../components/ScrollDown";
 import SelectLink from "../components/Link";
 import Nav from "../components/Nav";
@@ -18,7 +17,7 @@ export default function Header() {
           <Icons />
         </motion.div>
         <div className="splash-image-wrapper">
-          <Image
+          <img
             className="splash-image"
             src="/splash2.jpg"
             alt="David Delahaye"
