@@ -1,9 +1,29 @@
 import SelectLink from "../components/Link";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion, useViewportScroll } from "framer-motion";
+import { useEffect, useState } from "react";
+
+function useActive() {
+  const [active, setActive] = useState(false);
+  const { scrollY } = useViewportScroll();
+  useEffect(() => {
+    scrollY.onChange(() => {
+      if (scrollY.current > window.innerHeight - 100) {
+        console.log("active");
+        setActive("active");
+      } else {
+        console.log("inactive");
+        setActive("inactive");
+      }
+    });
+  }, [active]);
+  return [active];
+}
 
 export default function Nav() {
+  const [active] = useActive();
+
   return (
-    <div className="bar">
+    <div className={`bar ${active}`}>
       <nav className="nav">
         <SelectLink href="/" className="is-active">
           <a>Home</a>
@@ -19,4 +39,5 @@ export default function Nav() {
       </nav>
     </div>
   );
+  return "";
 }

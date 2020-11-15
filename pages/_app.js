@@ -8,25 +8,25 @@ import Page from "../components/page";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
+import Nav from "../components/Nav";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   return (
     <div className="siteWrapper">
-      <Header />
-
       <Seo
         title="David Delahaye"
         description="David Delahaye is Generally considered to be a very good guy"
       />
 
+      <Header />
+      <Nav />
       <AnimatePresence exitBeforeEnter>
         <Page key={router.route}>
           <Component {...pageProps} />
         </Page>
       </AnimatePresence>
-
       <Footer />
     </div>
   );

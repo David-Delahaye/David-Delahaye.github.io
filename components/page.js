@@ -4,8 +4,7 @@ import { useRouter } from "next/router";
 
 export default function Page({ children }) {
   if (typeof window !== "undefined") {
-    const bar = Math.floor((window.innerHeight / 100) * 80);
-    console.log(bar);
+    const bar = Math.floor((window.innerHeight / 100) * 100);
     if (window.scrollY > bar) {
       console.log(window.scrollY, bar);
       window.scrollTo(0, bar);
@@ -15,8 +14,10 @@ export default function Page({ children }) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: 200 }}
-      animate={{ opacity: 1, x: 0 }}
+      key="page"
+      className="page-wrapper"
+      initial={{ opacity: 0, x: 200, zIndex: 0 }}
+      animate={{ opacity: 1, x: 0, zIndex: 0 }}
       exit={{ opacity: 0, x: -200 }}
       transition={{ duration: 0.15 }}
     >
