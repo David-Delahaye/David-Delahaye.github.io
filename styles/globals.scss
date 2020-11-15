@@ -45,6 +45,12 @@ html {
   overflow-x: hidden;
 }
 
+img {
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
 .siteWrapper {
   overflow: hidden;
 }
