@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,700;1,400&display=swap");
 $main-color: hsl(125, 54%, 59%);
-$light-color: hsl(125, 57%, 92%);
+$light-color: hsl(125, 54%, 98%);
 $dark-color: hsl(125, 54%, 5%);
-$back-accent: hsl(125, 15%, 93%);
+$back-accent: hsl(125, 30%, 90%);
+$cta-color: hsl(125, 54%, 8%);
 $shadow: 0px 4px 10px rgba(90, 90, 90, 0.486);
 $padding-space-lg: 5rem 3rem;
 $padding-space-m: 4rem 3rem;
@@ -27,11 +28,10 @@ $padding-space-m: 4rem 3rem;
 }
 
 html {
-  background-color: rgb(255, 255, 255);
-  color: rgb(11, 44, 16);
   font-family: "Josefin Sans", sans-serif;
   font-size: 15px;
   overflow-x: hidden;
+  background-color: $back-accent;
 }
 
 .siteWrapper {
@@ -127,7 +127,7 @@ header {
     }
     .selected {
       color: $dark-color !important;
-      background-color: $back-accent !important;
+      background-color: $light-color !important;
       box-shadow: none !important;
     }
   }
@@ -152,11 +152,6 @@ header {
     height: 60px;
     width: 60px;
   }
-}
-
-.page-wrapper-wrapper {
-  position: relative;
-  z-index: 0;
 }
 
 .page-wrapper {
@@ -199,17 +194,20 @@ header {
 
 main {
   overflow: hidden;
-  min-height: 70rem;
+  min-height: 70vh;
+  background-color: $back-accent;
   flex-direction: column;
+  padding-bottom: 5rem;
   section {
     @extend %container;
     padding: $padding-space-m;
-    border-bottom: 4px solid $back-accent;
+    background-color: $light-color;
+    margin-bottom: 1.5rem;
+    box-shadow: $shadow;
   }
   section:first-of-type {
     padding: $padding-space-lg;
     width: 100%;
-    background-color: $back-accent;
     box-shadow: $shadow;
   }
 }
@@ -249,6 +247,7 @@ li {
   display: grid;
   grid-template-columns: auto;
   column-gap: 1.5rem;
+  margin-bottom: 3rem;
   p {
     margin-bottom: 1rem;
   }
@@ -272,9 +271,11 @@ li {
       display: flex;
       flex-wrap: wrap;
       p {
+        background-color: $dark-color;
         padding: 0.3rem;
         margin: 0.2rem 0.3rem;
-        background-color: $light-color;
+        border-radius: 5px;
+        color: $light-color;
       }
     }
   }
@@ -314,7 +315,10 @@ button {
   font-weight: 800;
   font-size: 1rem;
   margin-top: 1rem;
+  background-color: $cta-color;
+  color: $light-color;
   border-radius: 5px;
+  border: none;
 }
 
 input,
@@ -328,14 +332,13 @@ form:invalid {
   button {
     pointer-events: none;
     transition: 0.3s;
-    color: rgb(77, 77, 77);
-    border: 1px solid rgb(71, 71, 71);
+    color: rgba(255, 255, 255, 0.767);
   }
 }
 
 form:valid {
   button {
-    color: black;
+    color: rgb(255, 255, 255);
     transform: scale(1.05);
     border: 1px solid rgb(0, 0, 0);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.178);

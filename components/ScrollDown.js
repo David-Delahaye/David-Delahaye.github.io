@@ -16,7 +16,7 @@ export default function ScrollDown() {
         if (typeof window !== "undefined") {
           console.log("here");
           window.scroll({
-            top: window.innerHeight - 40,
+            top: window.innerHeight,
             left: 0,
             behavior: "smooth",
           });

@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   return (
-    <div className="siteWrapper">
+    <>
       <Seo
         title="David Delahaye"
         description="David Delahaye is Generally considered to be a very good guy"
@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
         </Page>
       </AnimatePresence>
       <Footer />
-    </div>
+    </>
   );
 }
 

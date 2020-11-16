@@ -5,6 +5,7 @@ export default function Seo({ title, description }) {
     <div>
       <Head>
         <title>{title}</title>
+        <meta name="mobile-web-app-capable" content="yes" />
         <meta name="description" content={description} />
         <link rel="icon" href="/favicon.svg" />
       </Head>
