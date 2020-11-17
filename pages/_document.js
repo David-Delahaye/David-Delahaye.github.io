@@ -9,13 +9,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>
-          <script
-            src="https://www.google.com/recaptcha/api.js"
-            async
-            defer
-          ></script>
-        </Head>
+        <Head></Head>
         <body>
           <Main />
           <NextScript />

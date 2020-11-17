@@ -180,6 +180,12 @@ header {
   }
 }
 
+.g-recaptcha {
+  display: inline-block;
+  transform-origin: left;
+  transform: scale(0.77);
+}
+
 main {
   overflow: hidden;
   min-height: 70vh;

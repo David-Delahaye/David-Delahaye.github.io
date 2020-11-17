@@ -230,6 +230,14 @@ header .splash .splash-text h2 {
       justify-content: space-around;
 }
 
+.g-recaptcha {
+  display: inline-block;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scale(0.77);
+          transform: scale(0.77);
+}
+
 main {
   overflow: hidden;
   min-height: 70vh;

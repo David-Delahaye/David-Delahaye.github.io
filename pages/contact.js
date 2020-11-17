@@ -1,5 +1,6 @@
 import Page from "../components/page";
 import { useState } from "react";
+import Head from "next/head";
 const testKey = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
 const siteKey = "6LeXAOQZAAAAAI80z63u0g34D0xpkmffsQkc8L6D";
 
@@ -31,6 +32,13 @@ export default function Contact() {
 
   return (
     <main>
+      <Head>
+        <script
+          src="https://www.google.com/recaptcha/api.js"
+          async
+          defer
+        ></script>
+      </Head>
       <section>
         <h2>Contact Me!</h2>
         <em>
