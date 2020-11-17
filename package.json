@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@sendgrid/mail": "^7.4.0",
     "framer-motion": "^2.9.4",
     "next": "10.0.1",
     "react": "17.0.1",
