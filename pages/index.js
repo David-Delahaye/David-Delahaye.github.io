@@ -14,44 +14,64 @@ export default function Home() {
       </section>
 
       <section>
-        <div className="line">
-          <div>
-            <h3>Skills</h3>
+        <div className="text-image">
+          <div className="text">
+            <h2>Design</h2>
             <p>
-              I Have been learning all I can about development since Autumn
-              2019, Along the way I have gained knowledge of many{" "}
-              <strong>powerful technologies </strong>
-              and have built a vast array of projects by myself and with a Team,
-              I am looking forward to continue progressing and look forward to
-              the next steps of that journey. A list of technologies i am
-              already proficient with are as follows: -
+              I have learnt many different skills to help bring a project to
+              fruition, from intuitive <strong> Web Design</strong> to the
+              importance of accessibility and <strong>UI/UX </strong>. I have
+              become proficient at front end development and have become a
+              specialist in <strong>ReactJS</strong>. I am looking forward to
+              continue progressing and look forward to the next steps of that
+              journey.
             </p>
           </div>
 
-          <div>
+          <div className="image">
             <Image src="/laptop.png" width="1287" height="747" />
           </div>
         </div>
-        <div className="line">
-          <div>
-            <h3>Goals</h3>
+        <div className="text-image  reverse">
+          <div className="text">
+            <h2>Development</h2>
             <p>
               My Goal for 2020/2021 is to begin working towards a full-time
-              career in <strong>web-development</strong> so i can spend more
-              time towards progressing myself and becoming a more competent
-              developer. If you have similar interests feel free to drop me a
-              line on my contact page, or feel free to take a look at some of my{" "}
-              <Link href="/work" scroll={false}>
-                <a>
-                  <strong>past projects</strong>
-                </a>
-              </Link>
+              career in <strong>Web-Development</strong>. I spend my time
+              building <strong>Responsive & Mobile Friendly</strong> projects
+              with an emphasis on building efficient and{" "}
+              <strong>Scalable</strong> codebases. working mainly with react
+              front-end and NodeJS backend.
             </p>
           </div>
-          <div>
+          <div className="image">
             <Image src="/mobile.png" width="1287" height="747" />
           </div>
         </div>
+        <div className="text-image">
+          <div className="text">
+            <h2>Marketing</h2>
+            <p>
+              The key of getting any project off the ground is to be able to
+              market it to the right audience, <strong>SEO</strong> is a key
+              skill for this and one i take pride in.{" "}
+              <strong>Digital Marketing</strong> is the future, with online
+              tools, we are now able to track and analyse your audience and make
+              use of <strong>Social-Media Campaigns</strong> to spread your
+              project to a wider audience cost-effectively.
+            </p>
+          </div>
+
+          <div className="image">
+            <Image src="/marketing.png" width="1287" height="747" />
+          </div>
+        </div>
+
+        <Link href="/work" scroll={false}>
+          <button className="center">
+            <strong>View My Work</strong>
+          </button>
+        </Link>
       </section>
     </main>
   );

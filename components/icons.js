@@ -17,7 +17,7 @@ export default function Icons() {
         rel="noopener noreferrer"
       >
         Github
-        <Image src="/github.svg" alt="github" width="16" height="16" />
+        <Image src="/github.svg" alt="github" width="25" height="25" />
       </motion.a>
       <motion.a
         variants={item}
@@ -27,7 +27,7 @@ export default function Icons() {
         rel="noopener noreferrer"
       >
         LinkedIn
-        <Image src="/linkedin.svg" alt="linkedIn" width="16" height="16" />
+        <Image src="/linkedin.svg" alt="linkedIn" width="25" height="25" />
       </motion.a>
       <motion.a
         variants={item}
@@ -37,7 +37,7 @@ export default function Icons() {
         rel="noopener noreferrer"
       >
         Twitter
-        <Image src="/twitter.svg" alt="twitter" width="16" height="16" />
+        <Image src="/twitter.svg" alt="twitter" width="25" height="25" />
       </motion.a>
       <motion.a
         variants={item}
@@ -47,7 +47,7 @@ export default function Icons() {
         rel="noopener noreferrer"
       >
         CV
-        <Image src="/cv.svg" alt="cv" width="16" height="16" />
+        <Image src="/cv.svg" alt="cv" width="25" height="25" />
       </motion.a>
     </div>
   );
