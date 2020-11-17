@@ -37,7 +37,14 @@ export default function Header() {
           </motion.h2>
 
           <motion.h2 key="location" variants={item}>
-            <img className="icon" src="/location.svg" /> North West, UK
+            <Image
+              className="icon"
+              src="/location.svg"
+              alt="blackpool"
+              width="25"
+              height="25"
+            />{" "}
+            North West, UK
           </motion.h2>
           <Icons />
         </motion.div>

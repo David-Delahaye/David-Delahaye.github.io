@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Icons() {
   const item = {
@@ -15,7 +16,8 @@ export default function Icons() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Github<img src="/github.svg"></img>
+        Github
+        <Image src="/github.svg" alt="github" width="16" height="16" />
       </motion.a>
       <motion.a
         variants={item}
@@ -24,7 +26,8 @@ export default function Icons() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        LinkedIn<img src="/linkedin.svg"></img>
+        LinkedIn
+        <Image src="/linkedin.svg" alt="linkedIn" width="16" height="16" />
       </motion.a>
       <motion.a
         variants={item}
@@ -33,7 +36,8 @@ export default function Icons() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Twitter<img src="/twitter.svg"></img>
+        Twitter
+        <Image src="/twitter.svg" alt="twitter" width="16" height="16" />
       </motion.a>
       <motion.a
         variants={item}
@@ -42,7 +46,8 @@ export default function Icons() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        CV<img src="/cv.svg"></img>
+        CV
+        <Image src="/cv.svg" alt="cv" width="16" height="16" />
       </motion.a>
     </div>
   );

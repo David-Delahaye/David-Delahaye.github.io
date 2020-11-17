@@ -9,14 +9,9 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import Nav from "../components/Nav";
-import * as gtag from "../lib/gtag";
-import Router from "next/router";
-Router.events.on("routeChangeComplete", (url) => gtag.pageview(url));
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-
-  // Notice how we track pageview when route is changed
 
   return (
     <>

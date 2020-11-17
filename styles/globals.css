@@ -32,7 +32,7 @@ html {
   background-color: #deeddf;
 }
 
-.siteWrapper {
+#__next {
   overflow: hidden;
 }
 
@@ -228,23 +228,6 @@ header .splash .splash-text h2 {
   text-align: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-}
-
-.icons img {
-  height: 1.3rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  margin: auto;
-}
-
-.icon {
-  height: 1.3rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
 }
 
 main {

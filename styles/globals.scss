@@ -34,7 +34,7 @@ html {
   background-color: $back-accent;
 }
 
-.siteWrapper {
+#__next {
   overflow: hidden;
 }
 
@@ -178,18 +178,6 @@ header {
     text-align: center;
     justify-content: space-around;
   }
-  img {
-    height: 1.3rem;
-    object-fit: cover;
-    object-position: center;
-    margin: auto;
-  }
-}
-
-.icon {
-  height: 1.3rem;
-  object-fit: cover;
-  object-position: center;
 }
 
 main {
