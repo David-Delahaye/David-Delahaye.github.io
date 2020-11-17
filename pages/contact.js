@@ -1,34 +1,32 @@
 import Page from "../components/page";
+import { useState } from "react";
+const testKey = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
+const siteKey = "6LeXAOQZAAAAAI80z63u0g34D0xpkmffsQkc8L6D";
 
 export default function Contact() {
+  const [message, setMessage] = useState("");
   async function formSubmit(e) {
     e.preventDefault();
-  }
-
-  function formSubmit(e) {
-    e.preventDefault();
-    grecaptcha.ready(function () {
-      grecaptcha
-        .execute(process.env.reCAPTCHA_site_key, { action: "submit" })
-        .then(async function (token) {
-          console.log(token);
-          const body = {
-            name: e.target.name.value,
-            email: e.target.email.value,
-            message: e.target.message.value,
-          };
-          const response = await fetch("/api/mail", {
-            method: "POST", // *GET, POST, PUT, DELETE, etc.
-            mode: "cors", // no-cors, *cors, same-origin
-            headers: {
-              "Content-Type": "application/json",
-              // 'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: JSON.stringify(body),
-          });
-          return response.json(); // parses JSON response into native JavaScript objects
-        });
+    console.log(e);
+    console.log("submit");
+    const body = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      message: e.target.message.value,
+      captcha: grecaptcha.getResponse(),
+    };
+    const response = await fetch("/api/mail", {
+      method: "POST", // *GET, POST, PUT, DELETE, etc.
+      mode: "cors", // no-cors, *cors, same-origin
+      headers: {
+        "Content-Type": "application/json",
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: JSON.stringify(body),
     });
+    const jsonResponse = await response.json();
+    console.log(jsonResponse);
+    setMessage(jsonResponse.message);
   }
 
   return (
@@ -64,8 +62,10 @@ export default function Contact() {
             How can i help?*
             <textarea name="message" placeholder=" " required />
           </label>
+          <div className="g-recaptcha" data-sitekey={siteKey} />
           <button>Submit</button>
         </form>
+        {message !== "" ? <div>{message}</div> : ""}
       </section>
     </main>
   );
