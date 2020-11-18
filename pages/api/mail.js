@@ -18,9 +18,11 @@ export default async (req, res) => {
   } else {
     //pass
     try {
+      const from = process.env.SENDGRID_FROM;
+      const to = process.env.SENDGRID_TO;
       await sendgrid.send({
-        to: "daviddelahaye3@gmail.com",
-        from: "delahaye3@hotmail.co.uk",
+        to: to,
+        from: from,
         subject: "Form-Submit @ david-delahaye.co.uk",
         html: `<h2>New form submit @ david-delahaye.co.uk</h2>
           <ul>
