@@ -11,6 +11,7 @@ $padding-space-sm: 2rem 1rem;
 $lg: 5rem;
 $m: 4rem;
 $sm: 2rem;
+$tny: 1rem;
 
 %flex-center {
   display: flex;
@@ -160,11 +161,7 @@ header {
 
 .page-wrapper {
   z-index: 0;
-}
-
-.page {
-  z-index: 0;
-  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .icons {
@@ -308,20 +305,33 @@ strong {
 }
 
 .contact {
+  @extend %container;
   display: flex;
   flex-direction: column;
-  label {
+  padding: $padding-space-lg;
+  padding-top: 0px;
+  .input-container {
+    margin: 1rem 0;
     font-weight: 800;
     display: flex;
     flex-direction: column;
-    padding: 0.5rem 0;
-    input,
-    textarea {
-      padding: 0.75rem 1rem;
-      margin-top: 0.25rem;
+    position: relative;
+    .input-label {
+      transition: 300ms;
+      left: 20px;
+      pointer-events: none;
+      position: absolute;
+      top: $tny;
+    }
+    .input-input {
+      padding: $tny;
       font-size: 1rem;
       font-weight: 300;
       border-radius: 5px;
+      border: none;
+      outline: none;
+      box-shadow: $shadow;
+      background-color: $light-color;
     }
     textarea {
       resize: vertical;
@@ -330,8 +340,16 @@ strong {
   }
 }
 
+.input-input:focus ~ .input-label,
+.input-input:not(:placeholder-shown) ~ .input-label {
+  border-radius: 5px 5px 0px 0px;
+  transform: translateY(-150%);
+  text-shadow: $shadow;
+}
+
 button {
   padding: 0.5rem 1.5rem;
+  transition: 0.3s;
   width: fit-content;
   font-weight: 800;
   font-size: 1rem;
@@ -340,13 +358,7 @@ button {
   color: $light-color;
   border-radius: 5px;
   border: none;
-}
-
-input,
-textarea {
-  outline: none;
-  border: 1px solid black;
-  transition: border-color 0.1s;
+  box-shadow: $shadow;
 }
 
 form:invalid {
@@ -354,6 +366,8 @@ form:invalid {
     pointer-events: none;
     transition: 0.3s;
     color: rgba(255, 255, 255, 0.767);
+    background-color: rgba(121, 121, 121, 0.74);
+    box-shadow: none;
   }
 }
 

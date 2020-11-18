@@ -11,7 +11,7 @@ header .splash, .bar .nav, .bar .nav a, .icons, .logos, footer {
           align-items: center;
 }
 
-.bar .nav, main section {
+.bar .nav, main section, .contact {
   width: 100%;
   max-width: 50rem;
   margin: auto;
@@ -198,11 +198,7 @@ header .splash .splash-text h2 {
 
 .page-wrapper {
   z-index: 0;
-}
-
-.page {
-  z-index: 0;
-  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .icons {
@@ -416,9 +412,12 @@ strong {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 5rem 3rem;
+  padding-top: 0px;
 }
 
-.contact label {
+.contact .input-container {
+  margin: 1rem 0;
   font-weight: 800;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -427,25 +426,47 @@ strong {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0.5rem 0;
+  position: relative;
 }
 
-.contact label input,
-.contact label textarea {
-  padding: 0.75rem 1rem;
-  margin-top: 0.25rem;
+.contact .input-container .input-label {
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  left: 20px;
+  pointer-events: none;
+  position: absolute;
+  top: 1rem;
+}
+
+.contact .input-container .input-input {
+  padding: 1rem;
   font-size: 1rem;
   font-weight: 300;
   border-radius: 5px;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: 0px 4px 10px rgba(90, 90, 90, 0.486);
+          box-shadow: 0px 4px 10px rgba(90, 90, 90, 0.486);
+  background-color: #f7fdf8;
 }
 
-.contact label textarea {
+.contact .input-container textarea {
   resize: vertical;
   height: 15rem;
 }
 
+.input-input:focus ~ .input-label,
+.input-input:not(:placeholder-shown) ~ .input-label {
+  border-radius: 5px 5px 0px 0px;
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+  text-shadow: 0px 4px 10px rgba(90, 90, 90, 0.486);
+}
+
 button {
   padding: 0.5rem 1.5rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -456,14 +477,8 @@ button {
   color: #f7fdf8;
   border-radius: 5px;
   border: none;
-}
-
-input,
-textarea {
-  outline: none;
-  border: 1px solid black;
-  -webkit-transition: border-color 0.1s;
-  transition: border-color 0.1s;
+  -webkit-box-shadow: 0px 4px 10px rgba(90, 90, 90, 0.486);
+          box-shadow: 0px 4px 10px rgba(90, 90, 90, 0.486);
 }
 
 form:invalid button {
@@ -471,6 +486,9 @@ form:invalid button {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   color: rgba(255, 255, 255, 0.767);
+  background-color: rgba(121, 121, 121, 0.74);
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 form:valid button {

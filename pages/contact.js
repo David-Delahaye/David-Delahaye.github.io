@@ -46,35 +46,57 @@ export default function Contact() {
           within a few days!
         </em>
       </section>
-      <section>
-        <form
-          className="contact"
-          name="contact"
-          method="post"
-          onSubmit={(e) => {
-            formSubmit(e);
-          }}
-        >
-          <input type="hidden" name="form-name" value="contact" />
-          <div className="line">
-            <label>
+      <form
+        className="contact"
+        name="contact"
+        method="post"
+        onSubmit={(e) => {
+          formSubmit(e);
+        }}
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <div className="line">
+          <div className="input-container">
+            <input
+              name="name"
+              className="input-input"
+              type="text"
+              placeholder=" "
+              required
+            />
+            <label for="name" className="input-label">
               Name*
-              <input name="name" type="text" placeholder=" " required />
-            </label>
-            <label>
-              Email*
-              <input name="email" type="email" placeholder=" " required />
             </label>
           </div>
-          <label>
+
+          <div className="input-container">
+            <input
+              name="email"
+              className="input-input"
+              type="email"
+              placeholder=" "
+              required
+            />
+            <label for="email" className="input-label">
+              Email*
+            </label>
+          </div>
+        </div>
+        <div className="input-container">
+          <textarea
+            name="message"
+            className="input-input"
+            placeholder=" "
+            required
+          />
+          <label for="message" className="input-label">
             How can i help?*
-            <textarea name="message" placeholder=" " required />
           </label>
-          <div className="g-recaptcha" data-sitekey={siteKey} />
-          <button>Submit</button>
-        </form>
-        {message !== "" ? <div>{message}</div> : ""}
-      </section>
+        </div>
+        <div className="g-recaptcha" data-sitekey={siteKey} />
+        <button>Submit</button>
+      </form>
+      {message !== "" ? <div>{message}</div> : ""}
     </main>
   );
 }
