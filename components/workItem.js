@@ -33,7 +33,7 @@ export default function WorkItem(props) {
             </a>
             <a href={props.live} target="_blank" rel="noopener noreferrer">
               {" "}
-              <i class="fas fa-desktop"></i> View Live Site
+              <i className="fas fa-desktop"></i> View Live Site
             </a>
           </div>
         </div>

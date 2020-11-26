@@ -17,10 +17,21 @@ export default function Works() {
         year="2020"
         code="https://github.com/David-Delahaye/UKH"
         image="/UKHResponsive.png"
-        techs={["ReactJS", "Redux", "Sass", "NodeJS", "Postgres", "PassportJS"]}
+        techs={["React", "Redux", "Sass", "NodeJS", "Postgres", "PassportJS"]}
         description="UKH is my first larger scale full stack CRUD Application. Users can create an account, add posts about their favourite plants, care tips and where to purchase them from. Other users can then comment on these posts leaving a score. It is meant as a hub for houseplant loving enthusiasts"
         problem="I started this project without much of an idea of what it would be about, adding little by little. But after a week of work i had made things to verbose that i had to scrap the project and start afresh."
         solution="When restarting, i planned out on paper all my project features, and had a clear Design structure for both the back-end API & database management, and created a coherent front-end design."
+      />
+      <WorkItem
+        name="Photography Blog Template"
+        live="https://photography-blog.vercel.app/"
+        year="2020"
+        code="https://github.com/David-Delahaye/photography"
+        image="/PhotoDesign.png"
+        techs={["React", "NextJS", "Sass"]}
+        description="A Styled Photography & Blog Template, the user can update their info and display their photography, sharing stories of their travels"
+        problem="For this project, i was unsure of how to store the users data, using a cms for such a small project seemed over the top."
+        solution="I decided to store all the photo's and blogs in seperate js objects, to be used and manipulated easily without being overencumbered by a back-end"
       />
       <WorkItem
         name="Maze Game"
