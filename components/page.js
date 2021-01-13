@@ -6,9 +6,7 @@ export default function Page({ children }) {
   if (typeof window !== "undefined") {
     const bar = window.innerHeight;
     if (window.scrollY > bar) {
-      console.log(window.scrollY, bar);
       window.scrollTo(0, bar);
-      console.log(window.scrollY);
     }
   }
 

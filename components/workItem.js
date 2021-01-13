@@ -29,7 +29,7 @@ export default function WorkItem(props) {
           <p>{props.solution || "N/A"}</p>
           <div className="links">
             <a href={props.code} target="_blank" rel="noopener noreferrer">
-              <i class="fas fa-code"></i> View Code
+              <i className="fas fa-code"></i> View Code
             </a>
             <a href={props.live} target="_blank" rel="noopener noreferrer">
               {" "}

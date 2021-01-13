@@ -29,7 +29,7 @@ export default function Home() {
           </div>
 
           <div className="image">
-            <Image src="/laptop.png" width="1287" height="747" />
+            <Image src="/laptop.png" alt="Design" width="1287" height="747" />
           </div>
         </div>
         <div className="text-image  reverse">
@@ -45,7 +45,12 @@ export default function Home() {
             </p>
           </div>
           <div className="image">
-            <Image src="/mobile.png" width="1287" height="747" />
+            <Image
+              src="/mobile.png"
+              alt="Development"
+              width="1287"
+              height="747"
+            />
           </div>
         </div>
         <div className="text-image">
@@ -63,7 +68,12 @@ export default function Home() {
           </div>
 
           <div className="image">
-            <Image src="/marketing.png" width="1287" height="747" />
+            <Image
+              src="/marketing.png"
+              alt="Marketing"
+              width="1287"
+              height="747"
+            />
           </div>
         </div>
 

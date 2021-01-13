@@ -1,9 +1,14 @@
 import Page from "../components/page";
+import Seo from "../components/seo";
 import WorkItem from "../components/workItem";
 
 export default function Works() {
   return (
     <main>
+      <Seo
+        title="David Delahaye - Work"
+        description="A selection of my most recent works"
+      />
       <section>
         <h2>Work</h2>
         <em>

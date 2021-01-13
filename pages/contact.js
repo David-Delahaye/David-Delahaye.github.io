@@ -1,6 +1,7 @@
 import Page from "../components/page";
 import { useState } from "react";
 import Head from "next/head";
+import Seo from "../components/seo";
 const testKey = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
 const siteKey = "6LeXAOQZAAAAAI80z63u0g34D0xpkmffsQkc8L6D";
 
@@ -8,8 +9,6 @@ export default function Contact() {
   const [message, setMessage] = useState("");
   async function formSubmit(e) {
     e.preventDefault();
-    console.log(e);
-    console.log("submit");
     const body = {
       name: e.target.name.value,
       email: e.target.email.value,
@@ -26,12 +25,15 @@ export default function Contact() {
       body: JSON.stringify(body),
     });
     const jsonResponse = await response.json();
-    console.log(jsonResponse);
     setMessage(jsonResponse.message);
   }
 
   return (
     <main>
+      <Seo
+        title="David Delahaye - Work"
+        description="Contact me and i'll get back to you within a few days"
+      />
       <Head>
         <script
           src="https://www.google.com/recaptcha/api.js"
@@ -64,7 +66,7 @@ export default function Contact() {
               placeholder=" "
               required
             />
-            <label for="name" className="input-label">
+            <label htmlFor="name" className="input-label">
               Name*
             </label>
           </div>
@@ -77,7 +79,7 @@ export default function Contact() {
               placeholder=" "
               required
             />
-            <label for="email" className="input-label">
+            <label htmlFor="email" className="input-label">
               Email*
             </label>
           </div>
@@ -89,7 +91,7 @@ export default function Contact() {
             placeholder=" "
             required
           />
-          <label for="message" className="input-label">
+          <label htmlFor="message" className="input-label">
             How can i help?*
           </label>
         </div>

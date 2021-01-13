@@ -52,7 +52,6 @@ export default function Header() {
           <Image
             className={`splash-image ${loaded}`}
             onLoad={() => {
-              console.log("loaded");
               setLoaded("loaded");
             }}
             src="/splash2.jpg"

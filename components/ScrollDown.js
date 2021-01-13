@@ -14,7 +14,6 @@ export default function ScrollDown() {
       key="scroller"
       onClick={() => {
         if (typeof window !== "undefined") {
-          console.log("here");
           window.scroll({
             top: window.innerHeight + 20,
             left: 0,

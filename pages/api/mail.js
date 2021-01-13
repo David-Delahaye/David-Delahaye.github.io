@@ -2,15 +2,9 @@ import sendgrid from "@sendgrid/mail";
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async (req, res) => {
-  console.log(req.body);
-
   let googleUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.CAPTCHA_SECRET}&response=${req.body.captcha}`;
-
-  console.log(googleUrl);
   let captchaResponse = await fetch(googleUrl);
   let jsonResponse = await captchaResponse.json();
-  console.log(jsonResponse);
-  console.log("-----------");
 
   //fail
   if (jsonResponse.success === false) {

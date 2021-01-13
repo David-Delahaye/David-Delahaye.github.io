@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Seo
         title="David Delahaye"
-        description="David Delahaye is Generally considered to be a very good guy"
+        description="Front-End developer based in the North West"
       />
 
       <Header />
