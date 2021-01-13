@@ -31,7 +31,7 @@ export default function Contact() {
   return (
     <main>
       <Seo
-        title="David Delahaye - Work"
+        title="David Delahaye - Contact"
         description="Contact me and i'll get back to you within a few days"
       />
       <Head>
