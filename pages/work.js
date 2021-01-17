@@ -7,7 +7,7 @@ export default function Works() {
     <main>
       <Seo
         title="David Delahaye - Work"
-        description="A selection of my most recent works"
+        description="A selection of David Delahaye's most recent work in Web Development"
       />
       <section>
         <h2>Work</h2>

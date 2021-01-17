@@ -32,7 +32,7 @@ export default function Contact() {
     <main>
       <Seo
         title="David Delahaye - Contact"
-        description="Contact me and i'll get back to you within a few days"
+        description="Contact David Delahaye to get a quote for a project, discuss potential web development projects or just to have a chat"
       />
       <Head>
         <script
