@@ -25,10 +25,10 @@
   <h3 align="center">Development Portfolio</h3>
 
   <p align="center">
-    A one stop shop for tracking your plants
+    A development portfolio for showcasing my work.
     <br />
     <br />
-    <a href="https://github.com/David-Delahaye/proplifter">View Demo</a>
+    <a href="https://david-delahaye.co.uk/">View Demo</a>
     ·
     <a href="https://github.com/David-Delahaye/David-Delahaye.github.io/issues">Report Bug</a>
     ·
@@ -71,12 +71,12 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-I made this project to test out Next.Js's capabilities alongside the utilities of firebase.
+I made this project to showcase my works and act as a front point of my career in development
 
 Here are the features:
-* Create an account with either google or email
-* Add your houseplants and insert their details
-* Track them through the months to ensure their healthy growth
+* Home page
+* Contact page hooking to my email
+* A page showcasing my works
 
 ### Built With
 
@@ -138,7 +138,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 [David Delahaye](https://david-delahaye.co.uk/) - [@DavDelahaye](https://twitter.com/DavDelahaye) - 
 
-Project Link: [https://github.com/David-Delahaye/proplifter](https://github.com/David-Delahaye/David-Delahaye.github.io)
+Project Link: [https://github.com/David-Delahaye/David-Delahaye.github.io](https://github.com/David-Delahaye/David-Delahaye.github.io)
 
 
 
